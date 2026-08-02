@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.synthefy.com/
+compliance:
+  program_published: true
+  page: https://www.synthefy.com/
+  certifications:
+  - SOC 2 Type II
+  - HIPAA
+  - GDPR
+  - Zero Data Retention
+standards:
+- id: bearer-token-auth
+  conforms: true
+  evidence: >-
+    Nori inference uses an OpenAI-style Authorization: Bearer token
+    (https://docs.synthefy.com/nori/quickstart).
+- id: api-key-auth
+  conforms: true
+  evidence: >-
+    Forecasting API authenticates with account API keys
+    (https://docs.synthefy.com/setup/api_key).
+- id: oauth2
+  conforms: false
+  evidence: No OAuth 2.0 flows documented.
+- id: openapi
+  conforms: false
+  evidence: >-
+    The docs expose an api-reference/openapi.json, but it is the Mintlify
+    "OpenAPI Plant Store" sample placeholder, not a real Synthefy specification.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No application/problem+json error contract documented.

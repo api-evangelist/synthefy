@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.synthefy.com/
+versioning:
+  scheme: uri-path
+  current: v2
+  detail: >-
+    Forecasting endpoint versioned in the path (/v2/forecast). Models are named
+    and versioned independently (Migas-1.0; Nori variants such as nori-30m).
+  docs: https://docs.synthefy.com/forecasting-api/overview
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: No published deprecation policy or RFC 8594 Sunset/Deprecation support found.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+notes: >-
+  No status page (status.synthefy.com does not resolve) and no separate SLA or
+  deprecation policy page were found as of this pass.

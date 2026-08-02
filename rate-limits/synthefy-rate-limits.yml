@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.synthefy.com/setup/api_key
+docs: https://docs.synthefy.com/setup/api_key
+rate_limits:
+- product: Synthefy Nori
+  scope: per-account
+  limit_count: 50
+  window: minute
+  description: 50 requests per minute against the hosted Nori model.
+- product: Synthefy Nori
+  scope: per-account
+  limit_count: 10000
+  window: day
+  description: 10,000 requests per day usage limit against the hosted Nori model.
+notes: >-
+  Published limits are for the hosted Nori model. The classical Forecasting product
+  uses separate keys and its own limits, which are not published in the public docs.

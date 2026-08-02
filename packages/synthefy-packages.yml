@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org / https://docs.synthefy.com/setup/installation
+packages:
+- language: python
+  registry: pypi
+  name: synthefy
+  version: 4.7.0
+  url: https://pypi.org/project/synthefy/
+  install: pip install synthefy
+  official: true
+  description: >-
+    Python client for the Synthefy API: time-series forecasting (SynthefyAPIClient)
+    and hosted Nori in-context tabular regression (SynthefyNoriClient).
+- language: python
+  registry: pypi
+  name: synthefy-nori
+  version: 0.12.0
+  url: https://pypi.org/project/synthefy-nori/
+  install: pip install synthefy-nori
+  official: true
+  source_code: https://github.com/Synthefy/synthefy-nori
+  description: >-
+    Open-source Nori tabular foundation model — training, inference, and
+    evaluation. Runs locally on GPU/CPU with a scikit-learn-style NoriRegressor;
+    downloads pretrained weights from Hugging Face.
+  extras:
+  - name: interpretability
+    install: pip install "synthefy-nori[interpretability]"
+  - name: eval
+    install: pip install "synthefy-nori[eval]"
+  - name: train
+    install: pip install "synthefy-nori[train]"

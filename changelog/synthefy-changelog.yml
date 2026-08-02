@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/Synthefy/synthefy-nori/releases
+scheme: semver
+component: synthefy-nori
+current_version: 0.12.0
+docs: https://github.com/Synthefy/synthefy-nori/releases
+entries:
+- version: 0.12.0
+  date: '2026-07-16'
+  breaking: false
+  highlights: [Zero-shot text features for NoriRegressor]
+- version: 0.11.1
+  date: '2026-07-16'
+  breaking: false
+  highlights: [Reject Nori Thinking selectors with a clear ValueError instead of an opaque failure]
+- version: 0.11.0
+  date: '2026-07-14'
+  breaking: false
+  highlights: [Documentation updates, Promotion of staging to public]
+- version: 0.10.0
+  date: '2026-07-13'
+  breaking: false
+  highlights: [Model-variant registry — select variants via a single model parameter (e.g. nori-30m)]
+- version: 0.9.0
+  date: '2026-06-23'
+  breaking: false
+  highlights: [Load checkpoints with weights_only=True to block pickle RCE, CI + speed-benchmark improvements]
+- version: 0.8.0
+  date: '2026-06-20'
+  breaking: true
+  highlights: [Removed flash-attention and legacy code cleanup]
+notes: >-
+  The hosted synthefy client is versioned separately (currently 4.7.0 on PyPI);
+  this changelog tracks the open-source synthefy-nori model, which publishes dated
+  GitHub Releases.

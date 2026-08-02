@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: probed
+note: >-
+  Probed the /.well-known/ discovery surface on the Synthefy hosts. No document
+  returned 200; absence is valid recorded data. No security.txt, OIDC, OAuth
+  metadata, api-catalog, or ai-plugin manifest is published.
+hosts:
+- host: https://api.synthefy.com
+  documents:
+  - {path: /.well-known/security.txt, status: 0}
+  - {path: /.well-known/openid-configuration, status: 0}
+  - {path: /.well-known/oauth-authorization-server, status: 0}
+  - {path: /.well-known/api-catalog, status: 0}
+  note: api.synthefy.com does not resolve/connect.
+- host: https://forecast.synthefy.com
+  documents:
+  - {path: /.well-known/security.txt, status: 403}
+  - {path: /.well-known/openid-configuration, status: 403}
+- host: https://www.synthefy.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}

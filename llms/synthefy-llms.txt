@@ -1,0 +1,36 @@
+# Synthefy Docs
+
+## Docs
+
+- [Cloud API Quick Start](https://docs.synthefy.com/forecasting-api/cloud-quickstart.md): Get started with Synthefy's Cloud Forecasting API using the simplest possible example.
+- [Data enrichment for forecasting](https://docs.synthefy.com/forecasting-api/data_enrichment.md): Learn how to enhance your datasets by integrating valuable insights from trusted external data sources, improving accuracy, depth, and decision-making potential.
+- [Forecasting API](https://docs.synthefy.com/forecasting-api/overview.md): Direct access to Synthefy's foundation models for time series forecasting via REST API.
+- [On-Prem Quick Start](https://docs.synthefy.com/forecasting-api/quickstart.md): Deploy the Forecasting API locally and make your first forecast request using the Python client.
+- [Nori — a tabular foundation model](https://docs.synthefy.com/index.md): Predict on any table in seconds, with no training.
+- [Categorical & Ordinal Targets](https://docs.synthefy.com/nori/categorical-targets.md): Predict labels on a discrete scale — ratings, counts, quality scores — instead of a continuous estimate.
+- [Embeddings](https://docs.synthefy.com/nori/embeddings.md): Turn any table row into a target-aware vector with Nori's encoder, then probe, cluster, search, or visualize it.
+- [Examples](https://docs.synthefy.com/nori/examples.md): Worked examples using Synthefy Nori (Tabular).
+- [Explainability](https://docs.synthefy.com/nori/explainability.md): Explain Nori's predictions — SHAP / Shapley values, feature interactions, partial dependence, and feature selection.
+- [Missing Values & Imputation](https://docs.synthefy.com/nori/missing-values.md): How Nori handles NaNs — what happens automatically, and how to impute yourself when you want control.
+- [Nori Quickstart](https://docs.synthefy.com/nori/quickstart.md): Get predictions on tabular data — run locally or call the hosted API.
+- [Amazon SageMaker](https://docs.synthefy.com/nori/sagemaker.md): Deploy Nori from AWS Marketplace as a SageMaker endpoint and predict in your own AWS account.
+- [Snowflake](https://docs.synthefy.com/nori/snowflake.md): Run Nori on your Snowflake data directly from SQL — no data export, no training.
+- [Text features](https://docs.synthefy.com/nori/text-features.md): Hand Nori free-text columns — it embeds them, reduces them to a few numeric columns, and predicts on the widened table. Zero-shot, no training.
+- [Overview](https://docs.synthefy.com/sdk/overview.md): Synthefy provides Python SDKs for tabular regression and time series forecasting.
+- [Time Series Quickstart](https://docs.synthefy.com/sdk/quickstart.md): Get started with Synthefy's time series forecasting API in minutes.
+- [Setting up your API key](https://docs.synthefy.com/setup/api_key.md): Quickly and securely connect to the Synthefy SDK by setting up your API key — in code or through environment variables.
+- [How to use Synthefy Docker](https://docs.synthefy.com/setup/docker.md): This documentation walk you through how to use the docker for development and forecasting model inference.
+- [Installation](https://docs.synthefy.com/setup/installation.md): Pick the right Synthefy package for what you want to do.
+- [Covariate Importance](https://docs.synthefy.com/usecases/covariate_importance.md): Demonstrates tools for future leaked covariate importance in Synthefy Foundation Model using zero-perturbation analysis. Generate synthetic autoregressive time series with exogenous Fourier inputs (ARX) and estimate covariate importance without retraining using zero perturbation analysis.
+- [Economic Indicator Backtesting](https://docs.synthefy.com/usecases/economic_backtesting.md): Learn how to forecast economic indicators using Synthefy's multi-variate forecasting with macroeconomic data from FRED and Haver.
+- [Inventory Forecasting](https://docs.synthefy.com/usecases/inventory_forecasting.md): Learn how to improve inventory forecasting accuracy by incorporating weather data and how to do conditional forecasting to discover which items move together.
+- [Pricing Simulation](https://docs.synthefy.com/usecases/pricing_simulation.md): Learn how to run pricing simulations using Synthefy's AI-powered conditional forecasting to optimize a pricing strategy and maximize revenue.
+
+## OpenAPI Specs
+
+- [openapi](https://docs.synthefy.com/api-reference/openapi.json)
+
+## Optional
+
+- [Website](https://synthefy.com)
+- [GitHub](https://github.com/Synthefy)

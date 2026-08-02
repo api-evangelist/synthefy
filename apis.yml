@@ -1,8 +1,33 @@
 aid: synthefy
 name: Synthefy
-description: Synthefy is a company surfaced as a portfolio company of wing-venture-capital and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1
+description: >-
+  Synthefy builds foundation models for structured data, replacing task-specific
+  machine learning (XGBoost, LightGBM, ARIMA, Prophet) with a single API call.
+  Its Nori tabular model performs in-context regression and classification on any
+  table with no training, and its time-series Forecasting API (Migas-1.0) delivers
+  multivariate probabilistic forecasts with exogenous context. The platform is
+  delivered as a hosted REST API, Python SDKs, Docker containers, AWS SageMaker,
+  and Snowflake, serving banking, retail, insurance, healthcare, infrastructure,
+  and marketing use cases with SOC 2 Type II, HIPAA, GDPR, and zero-data-retention
+  compliance.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://synthefy.com/opengraph-image
 url: https://raw.githubusercontent.com/api-evangelist/synthefy/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,12 +37,95 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Foundation Models
+- Machine Learning
+- Forecasting
+- Time Series
+- Tabular Data
+- Synthetic Data
+- Artificial Intelligence
+- Predictive Analytics
+apis:
+- name: Synthefy Forecasting API
+  description: >-
+    Direct REST access to Synthefy's foundation models for multivariate time-series
+    forecasting (Migas-1.0), with automatic timestamp/value/metadata handling and
+    exogenous covariate context. Called via the synthefy Python client.
+  humanURL: https://docs.synthefy.com/forecasting-api/overview
+  baseURL: https://forecast.synthefy.com
+  tags:
+  - Forecasting
+  - Time Series
+  properties:
+  - type: GettingStarted
+    url: https://docs.synthefy.com/forecasting-api/cloud-quickstart
+  - type: APIReference
+    url: https://docs.synthefy.com/forecasting-api/overview
+- name: Synthefy Nori API
+  description: >-
+    Hosted in-context tabular regression and classification via the Nori foundation
+    model. Predicts on any table in a single forward pass with no training; served
+    over an OpenAI-style Bearer-authenticated inference endpoint.
+  humanURL: https://docs.synthefy.com/nori/quickstart
+  baseURL: https://inference.baseten.co
+  tags:
+  - Tabular Data
+  - Foundation Models
+  properties:
+  - type: GettingStarted
+    url: https://docs.synthefy.com/nori/quickstart
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: Website
+  url: https://www.synthefy.com/
+- type: DeveloperPortal
+  url: https://docs.synthefy.com/
+- type: Documentation
+  url: https://docs.synthefy.com/
+- type: APIReference
+  url: https://docs.synthefy.com/forecasting-api/overview
+- type: GettingStarted
+  url: https://docs.synthefy.com/forecasting-api/cloud-quickstart
+- type: Blog
+  url: https://www.synthefy.com/blog
+- type: Support
+  url: https://www.synthefy.com/contact
+- type: GitHubOrganization
+  url: https://github.com/Synthefy
+- type: SignUp
+  url: https://console.synthefy.com/
+- type: Login
+  url: https://console.synthefy.com/
+- type: PrivacyPolicy
+  url: https://www.synthefy.com/privacy
+- type: Compliance
+  url: https://www.synthefy.com/
+- type: Authentication
+  url: authentication/synthefy-authentication.yml
+- type: Packages
+  url: packages/synthefy-packages.yml
+- type: SDKs
+  url: packages/synthefy-packages.yml
+- type: MCPServer
+  url: mcp/synthefy-mcp.yml
+- type: LLMsTxt
+  url: llms/synthefy-llms.txt
+- type: Conformance
+  url: conformance/synthefy-conformance.yml
+- type: Conventions
+  url: conventions/synthefy-conventions.yml
+- type: RateLimits
+  url: rate-limits/synthefy-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/synthefy-lifecycle.yml
+- type: ChangeLog
+  url: changelog/synthefy-changelog.yml
+- type: DomainSecurity
+  url: security/synthefy-domain-security.yml

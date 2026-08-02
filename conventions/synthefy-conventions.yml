@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.synthefy.com/
+docs: https://docs.synthefy.com/
+authentication:
+  style: api-key
+  detail: >-
+    Account API keys (Console-managed). Forecasting via the SynthefyAPIClient
+    api_key/SYNTHEFY_API_KEY; Nori via Authorization: Bearer $SYNTHEFY_NORI_API_KEY.
+  ref: authentication/synthefy-authentication.yml
+idempotency:
+  supported: false
+  detail: No documented idempotency-key header or contract in the public docs.
+pagination:
+  supported: false
+  detail: >-
+    APIs are prediction/inference calls (batch dataframes in one request), not
+    collection listings, so there is no documented pagination.
+versioning:
+  scheme: uri-path
+  detail: >-
+    The Forecasting API endpoint is versioned in the path (/v2/forecast on
+    https://forecast.synthefy.com). Models are versioned by name (Migas-1.0,
+    nori-30m).
+  ref: lifecycle/synthefy-lifecycle.yml
+request_format:
+  detail: >-
+    JSON request bodies. Forecasting takes history_dfs/target_dfs with
+    target_col, timestamp_col, metadata_cols, leak_cols, and a model selector.
+    Nori's /predict takes model, task, X_train, y_train, X_test arrays.
+rate_limit_signaling:
+  detail: >-
+    Published quota is 50 req/min and 10,000 req/day for Nori (per account).
+  ref: rate-limits/synthefy-rate-limits.yml
+error_envelope:
+  detail: >-
+    No RFC 9457 problem+json contract is documented publicly. The Nori SDK raises
+    a ValueError for unsupported (hosted-only) feature selectors.

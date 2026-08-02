@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.synthefy.com/setup/api_key
+docs: https://docs.synthefy.com/setup/api_key
+summary:
+  types: [apiKey, http]
+  api_key_in: [header, environment]
+  oauth2_flows: []
+notes: >-
+  Synthefy authenticates with account API keys created in the Synthefy Console
+  (https://console.synthefy.com/, Settings -> API Keys). Keys can be passed to the
+  Python SDK via the api_key argument or the SYNTHEFY_API_KEY environment variable.
+  The classical Forecasting product and the Nori model use SEPARATE keys with
+  different rate limits and creation flows; a classical key does not authenticate
+  Nori requests. Nori allows exactly one key per account (shown once at creation,
+  not retrievable) and requires an active subscription.
+schemes:
+- name: SynthefyApiKey
+  type: apiKey
+  in: header
+  scope: forecasting-api
+  description: >-
+    Synthefy Forecasting API key supplied by the synthefy Python client
+    (SynthefyAPIClient); set in code or via SYNTHEFY_API_KEY.
+  sources: [https://docs.synthefy.com/setup/api_key]
+- name: NoriBearerToken
+  type: http
+  scheme: bearer
+  scope: nori
+  description: >-
+    Nori hosted inference is called with an Authorization: Bearer
+    $SYNTHEFY_NORI_API_KEY header against the OpenAI-style /predict endpoint.
+  sources: [https://docs.synthefy.com/nori/quickstart]
