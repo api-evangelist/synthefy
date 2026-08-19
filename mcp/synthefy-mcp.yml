@@ -2,24 +2,38 @@ generated: '2026-07-21'
 method: derived
 status: candidate
 source: https://docs.synthefy.com/
-note: >-
-  No official/hosted Synthefy MCP server was found (searched docs, npm
-  @modelcontextprotocol, and MCP registries). This is a DERIVED candidate tool
-  list mapped from Synthefy's two documented API operations, offered as a
-  starting point for an agent integration — not a published server.
+note: No official/hosted Synthefy MCP server was found (searched docs, npm @modelcontextprotocol, and
+  MCP registries). This is a DERIVED candidate tool list mapped from Synthefy's two documented API operations,
+  offered as a starting point for an agent integration — not a published server.
 server:
   name: synthefy
   transport: http
 tools:
 - name: forecast_time_series
-  description: >-
-    Produce a multivariate time-series forecast from history and target
-    dataframes using a Synthefy foundation model (e.g. Migas-1.0).
+  description: Produce a multivariate time-series forecast from history and target dataframes using a
+    Synthefy foundation model (e.g. Migas-1.0).
   source_operation: POST https://forecast.synthefy.com/v2/forecast
-  inputs: [history_dfs, target_dfs, target_col, timestamp_col, metadata_cols, leak_cols, model]
+  inputs:
+  - history_dfs
+  - target_dfs
+  - target_col
+  - timestamp_col
+  - metadata_cols
+  - leak_cols
+  - model
 - name: nori_predict
-  description: >-
-    In-context tabular regression/classification with the Nori foundation model
-    — predict targets for X_test given labeled X_train/y_train context.
+  description: In-context tabular regression/classification with the Nori foundation model — predict targets
+    for X_test given labeled X_train/y_train context.
   source_operation: POST https://inference.baseten.co/predict
-  inputs: [model, task, X_train, y_train, X_test]
+  inputs:
+  - model
+  - task
+  - X_train
+  - y_train
+  - X_test
+deployment:
+  mode: none
+  verified: derived
+  tools: 2
+  checked: '2026-08-12'
+  source: catalog MCP census
