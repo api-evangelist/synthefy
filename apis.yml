@@ -54,7 +54,7 @@ modified: '2026-07-21'
 tags:
 - Company
 - Foundation Models
-- Machine-Learning
+- Machine Learning
 - Forecasting
 - Time Series
 - Tabular Data
@@ -71,6 +71,7 @@ tags_raw:
 - Synthetic Data
 - Artificial Intelligence
 - Predictive Analytics
+- Machine-Learning
 apis:
 - name: Synthefy Forecasting API
   description: >-
